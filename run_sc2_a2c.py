@@ -6,7 +6,7 @@ from functools import partial
 from pysc2.env.sc2_env import SC2Env
 from baselines.a2c.a2c import learn
 from baselines.common.vec_env.subproc_vec_env import SubprocVecEnv
-from sc2.FullyConvPolicy import FullyConvPolicy
+from sc2.policy import FullyConvPolicy
 from sc2.sc2toatari import SC2AtariEnv
 from absl import flags
 from absl.flags import FLAGS

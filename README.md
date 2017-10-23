@@ -29,17 +29,17 @@ With this the 3 easiest mini-games can be "solved" quickly.
   </tr>
   <tr>
     <td align="center">CollectMineralShards**</td>
-    <td align="center">32*3100</td>
-    <td align="center">66</td>
-    <td align="center">94</td>
+    <td align="center">32*5000</td>
+    <td align="center">73</td>
+    <td align="center">100</td>
     <td align="center">103</td>
     <td align="center">134</td>
   </tr>
     <tr>
       <td align="center">DefeatRoaches**</td>
-      <td align="center">48*1800</td>
-      <td align="center">38</td>
-      <td align="center">258</td>
+      <td align="center">48*4000</td>
+      <td align="center">46</td>
+      <td align="center">260</td>
       <td align="center">100</td>
       <td align="center">355</td>
     </tr>
