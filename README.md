@@ -8,6 +8,8 @@ The **FullyConv** -policy (smaller version) from https://deepmind.com/documents/
 
 With this the 3 easiest mini-games can be "solved" quickly.
 
+See also: https://github.com/islamelnabarawy/sc2agents for similar project (this was done independently but later).
+
 ### Results
 
 <table align="center">
