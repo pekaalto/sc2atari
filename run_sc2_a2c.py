@@ -36,7 +36,7 @@ def train():
             seed=1,
             total_timesteps=int(1e6) * FLAGS.frames,
             lrschedule=FLAGS.lrschedule,
-            nstack=FLAGS.frame_stack,
+            nstack=1, #must be 1 for FullyConvPolicy above
             ent_coef=FLAGS.entropy_weight,
             vf_coef=FLAGS.value_weight,
             max_grad_norm=1.0,
@@ -54,8 +54,6 @@ def main():
     flags.DEFINE_integer("step_mul", 8, "sc2 step multiplier")
     flags.DEFINE_integer("n_envs", 1, "Number of sc2 environments to run in parallel")
     flags.DEFINE_integer("resolution", 32, "sc2 resolution")
-    flags.DEFINE_integer("frame_stack", 2,
-        "atari style frame stacking, need to be at least 2 for baselines a2c to work")
     flags.DEFINE_string("lrschedule", "constant",
         "linear or constant, learning rate schedule for baselines a2c")
     flags.DEFINE_float("learning_rate", 3e-4, "learning rate")

@@ -12,9 +12,14 @@ class FullyConvPolicy:
         X = tf.placeholder(tf.int32, ob_shape)  # obs
 
         with tf.variable_scope("fullyconv_model", reuse=reuse):
-            x_onehot = layers.one_hot_encoding(X,
+            x_onehot = layers.one_hot_encoding(
+                # assuming we have only one channel
+                X[:, :, :, 0],
                 num_classes=SCREEN_FEATURES.player_relative.scale
-            )[:, :, :, 1:]
+            )
+
+            #don't one hot 0-category
+            x_onehot = x_onehot[:, :, :, 1:]
 
             h = layers.conv2d(
                 x_onehot,
