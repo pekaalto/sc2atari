@@ -104,3 +104,9 @@ class SC2AtariEnv:
 
     def close(self):
         self.sc2_env.close()
+
+    # useful function that returns the structured observations as dicts
+    # keys = ['single_select', 'multi_select', 'build_queue', 'cargo', 'cargo_slots_available', 'screen', 'minimap',
+    # 'game_loop', 'score_cumulative', 'player', 'control_groups', 'available_actions']
+    def get_observation(self):
+        return self.sc2_env._features.transform_obs(self.sc2_env._obs[0].observation)
